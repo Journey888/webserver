@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lc.webserver.mapper.ManageMapper">
+
+    <resultMap  type="com.lc.webserver.entity.Title" id="Title">
+        <result column="title_id" property="titleId"/>
+        <result column="type_id" property="typeId"/>
+        <result column="title_content" property="titleContent"/>
+        <result column="title_describe" property="titleDescribe"/>
+        <result column="status" property="status"/>
+    </resultMap>
+
+    <select id="selectAllTitle" resultMap="Title" >
+        select * from t_title
+    </select>
+</mapper>
