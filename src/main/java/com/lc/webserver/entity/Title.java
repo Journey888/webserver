@@ -9,6 +9,8 @@ public class Title {
 
     private String titleDescribe;
 
+    private int status;
+
     public String getTitleId() {
         return titleId;
     }
@@ -39,5 +41,13 @@ public class Title {
 
     public void setTitleDescribe(String titleDescribe) {
         this.titleDescribe = titleDescribe;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }
