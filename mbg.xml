@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+    	<!-- 该属性设为true，去掉dao中的注释 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!-- 配置数据库连接信息-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3307/questionbank?serverTimezone=GMT%2B8"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+        <!-- 指定javabean生成的位置-->
+        <javaModelGenerator
+                targetPackage="com.lc.webserver.entity"
+                targetProject="./src/main/java"/>
+        <!--指定sql映射文件生成的位置-->
+<!--        <sqlMapGenerator-->
+<!--                targetPackage="mapper"-->
+<!--                targetProject="./src/main/resources"/>-->
+<!--        &lt;!&ndash;指定dao接口生成的位置  mapper接口&ndash;&gt;-->
+<!--        <javaClientGenerator type="XMLMAPPER"-->
+<!--                             targetPackage="com.lc.crud.dao"-->
+<!--                             targetProject="./src/main/java"/>-->
+        <!--    指定每个表的生成策略    -->
+        <table tableName="t_title" domainObjectName="Title"  />
+        <table tableName="t_type" domainObjectName="Type"/>
+        <table tableName="t_option" domainObjectName="Option"/>
+    </context>
+</generatorConfiguration>
